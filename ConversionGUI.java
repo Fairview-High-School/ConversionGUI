@@ -1,15 +1,10 @@
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JRadioButton;
-import javax.swing.ButtonGroup;
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
 
 public class ConversionGUI implements ActionListener {
     //declare instance variables
@@ -33,6 +28,8 @@ public class ConversionGUI implements ActionListener {
         mainPanel = new JPanel();
         convertButton = new JButton("Convert");
         convertButton.addActionListener(this);
+        mainFrame.getRootPane().setDefaultButton(convertButton);
+
         conversionOptions = setConversionOptions();
         buttonGroup = new ButtonGroup();
         radioButtons = buildRadioButtons();
